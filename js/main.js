@@ -3,12 +3,22 @@
 const navBtn = document.querySelector('.nav-icon-btn');
 const navIcon = document.querySelector('.nav-icon');
 const nav = document.querySelector('.header__top-row')
+const navList = document.querySelector('.nav__list');
 
-navBtn.onclick = function() {
+function navAddRemoveClass() {
     navIcon.classList.toggle('nav-icon--active');
+    navList.classList.toggle('nav__list--active');
     nav.classList.toggle('header__top-row--mobile');
     document.body.classList.toggle('no-scroll');
-};
+}
+
+navBtn.onclick = function() {
+    navAddRemoveClass();
+}
+
+navList.onclick = function() {
+    navAddRemoveClass();
+}
 
 /* Phone Mask */
 
