@@ -1,0 +1,40 @@
+.nav-icon {
+    position: relative;
+    background-color: $text;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    opacity: 0.4;
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        background-color: $text;
+        width: 50px;
+        height: 5px;
+        border-radius: 3px;
+    }
+
+    &::before {
+        top: 20px;
+    }
+
+    &::after {
+        bottom: 20px;
+    }
+}
+
+.nav-icon--active {
+    transform: rotate(45deg);
+
+    &::after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+
+    &::before {
+        display: none;
+    }
+   
+}
